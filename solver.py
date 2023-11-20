@@ -75,12 +75,9 @@ def valid(bo, num, pos):
         if bo[i][pos[1]] == num and pos[0] != i:
             return False
         
-    # check the box if it contains the number we are inserting
-    box_x = pos[1] // 3
-    box_y = pos[0] // 3
-
-    start_i = box_y * 3
-    start_j = box_x * 3    
+    # check the box if it contains the number we are inserting    
+    start_i = (pos[0] // 3) * 3
+    start_j = (pos[1] // 3) * 3    
 
     for i in range(start_i, start_i + 3):
         for j in range(start_j, start_j + 3):
